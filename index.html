@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="QuickWash in Aachen und Umgebung: Auto-Außenwäsche, Mülltonnenreinigung, Einfahrten, Hauseingänge und Fenster. Sauber. Schnell. Zuverlässig. Jetzt Termin anfragen.">
+<meta property="og:title" content="QuickWash Aachen | Mobile Reinigungsservice">
+<meta property="og:description" content="Auto-Außenwäsche, Mülltonnen, Einfahrten, Hauseingänge und Fenster. Wir kommen zu dir.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quickwasch.de/">
+<meta property="og:locale" content="de_DE">
+<meta name="theme-color" content="#07090D">
+<link rel="canonical" href="https://quickwasch.de/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>QuickWash Aachen | Mobile Reinigungsservice</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,500;0,700;0,800;1,700;1,800&family=Mulish:wght@400;500;600;700&family=Caveat:wght@500&display=swap">
+<style>
+body{margin:0}
+/* Layout: schwarze Karte als Webseite. Logo und Slogan aus der Visitenkarte, Leistungen mit blauen Linien-Icons, Kontakt mit QR-Code rechts wie auf der Rückseite. */
+:root {
+  --bg: #07090D;
+  --surface: #0E1319;
+  --line: #1B2431;
+  --ink: #F2F5FA;
+  --muted: #9BA8BB;
+  --silver: #DDE3EC;
+  --blue: #2A86F0;
+  --btn: #1A6FD6;
+  --ok: #5CCB8B;
+  --font-display: "Exo 2", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Mulish", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-script: "Caveat", "Segoe Script", cursive;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-weight: 400; font-size: 17px; line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 84px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 800; line-height: 1.1; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { max-width: 1040px; margin-inline: auto; }
+section { padding-block: clamp(48px, 8vw, 96px); }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: var(--silver); margin-bottom: 16px; }
+h2 { font-size: clamp(28px, 4.4vw, 42px); letter-spacing: .01em; }
+.lead { color: var(--muted); max-width: 54ch; margin-top: 14px; font-size: 18px; }
+.rule { width: 72px; height: 2px; background: var(--blue); margin: 20px 0 0; border: 0; }
+.center { text-align: center; }
+.center .lead { margin-inline: auto; }
+.center .rule { margin-inline: auto; }
+
+/* Logo */
+.wm { font-family: var(--font-display); font-style: italic; font-weight: 800; letter-spacing: -0.005em; text-transform: uppercase; line-height: 1; white-space: nowrap; }
+.wm .q { color: var(--silver); }
+.wm .w { color: var(--blue); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand svg { width: 64px; height: 28px; }
+.brand .wm { font-size: 24px; }
+.phone-top { text-decoration: none; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--silver); letter-spacing: .04em; }
+.phone-top:hover { color: var(--blue); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 700 16px var(--font-body); letter-spacing: .06em; text-transform: uppercase; padding: 15px 26px; border-radius: 10px; border: 1.5px solid transparent; text-decoration: none; cursor: pointer; }
+.btn-primary { background: var(--btn); color: #fff; }
+.btn-primary:hover { filter: brightness(1.12); }
+.btn-ghost { border-color: var(--line); background: transparent; color: var(--ink); }
+.btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
+
+/* Hero */
+.hero { padding-top: clamp(16px, 4vw, 40px); }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: center; }
+.logo-big { margin-bottom: 28px; }
+.logo-big svg { width: min(260px, 70%); height: auto; display: block; }
+.logo-big .wm { font-size: clamp(44px, 9vw, 72px); margin-top: 6px; }
+.logo-big .sub { font-size: 13px; letter-spacing: .34em; text-transform: uppercase; color: var(--silver); margin-top: 12px; }
+.hero h1 { font-size: clamp(30px, 5vw, 46px); letter-spacing: .01em; }
+.hero h1 span { color: var(--blue); }
+.checks { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; }
+.checks li { display: flex; gap: 12px; align-items: flex-start; font-weight: 600; }
+.checks svg { width: 22px; height: 22px; flex: none; margin-top: 2px; color: var(--blue); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+.ba { position: relative; width: 100%; aspect-ratio: 4 / 3.4; border-radius: 14px; overflow: hidden; isolation: isolate; user-select: none; touch-action: pan-y; border: 1px solid var(--line); }
+.ba-layer { position: absolute; inset: 0; }
+.ba-clean {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(255,255,255,.55), transparent 55%),
+    repeating-linear-gradient(0deg, transparent 0 69px, #aab5b7 69px 72px),
+    repeating-linear-gradient(90deg, transparent 0 89px, #aab5b7 89px 92px),
+    #d6dddd;
+}
+.ba-dirty {
+  clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0);
+  background:
+    radial-gradient(circle at 18% 28%, rgba(20,38,20,.75) 0 9%, transparent 22%),
+    radial-gradient(circle at 62% 64%, rgba(35,30,15,.7) 0 12%, transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(30,50,25,.6) 0 8%, transparent 20%),
+    radial-gradient(circle at 38% 86%, rgba(25,25,15,.65) 0 10%, transparent 24%),
+    repeating-linear-gradient(0deg, transparent 0 69px, #2a2a22 69px 72px),
+    repeating-linear-gradient(90deg, transparent 0 89px, #2a2a22 89px 92px),
+    #6d6b58;
+}
+.ba-tag { position: absolute; top: 14px; padding: 5px 13px; border-radius: 6px; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; background: #07090D; color: #F2F5FA; z-index: 2; }
+.ba-tag.l { left: 14px; }
+.ba-tag.r { right: 14px; background: #1A6FD6; color: #fff; }
+.ba-handle { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 3px; margin-left: -1.5px; background: #fff; z-index: 3; pointer-events: none; }
+.ba-handle::after { content: ""; position: absolute; top: 50%; left: 50%; width: 42px; height: 42px; margin: -21px 0 0 -21px; border-radius: 50%; background: #1A6FD6; border: 3px solid #fff; box-shadow: 0 2px 10px rgba(0,0,0,.4); }
+.ba-range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 4; margin: 0; }
+.ba-caption { font-size: 14px; color: var(--muted); margin-top: 10px; }
+
+/* Leistungen */
+.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 44px; }
+.service { display: grid; grid-template-columns: 52px 1fr; gap: 6px 20px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px; min-width: 0; }
+.service svg { width: 46px; height: 46px; color: var(--blue); grid-row: span 2; }
+.service h3 { font-size: 17px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; align-self: end; }
+.service p { color: var(--muted); font-size: 16px; }
+.more { color: var(--muted); margin-top: 22px; }
+
+/* Vorteile, Ablauf */
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 44px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px; min-width: 0; }
+.tile h3 { font-size: 22px; letter-spacing: .02em; margin-bottom: 8px; }
+.tile p { color: var(--muted); font-size: 16px; }
+.about-text { display: grid; gap: 16px; margin: 40px auto 0; max-width: 62ch; color: var(--muted); font-size: 18px; }
+.about-text .sign { font-family: var(--font-display); font-style: italic; font-weight: 800; color: var(--ink); font-size: 20px; letter-spacing: .02em; }
+.tile .n { font-family: var(--font-display); font-style: italic; font-weight: 800; font-size: 40px; color: var(--blue); line-height: 1; margin-bottom: 12px; }
+
+.band { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: clamp(32px, 6vw, 64px); text-align: center; position: relative; overflow: hidden; }
+.band::before { content: ""; position: absolute; left: 50%; top: 0; width: 140px; height: 3px; background: var(--blue); transform: translateX(-50%); }
+.band p { color: var(--muted); margin: 14px auto 0; max-width: 46ch; }
+.band .btn { margin-top: 26px; }
+
+.faq { display: grid; gap: 12px; margin-top: 40px; max-width: 760px; margin-inline: auto; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 0 22px; }
+summary { list-style: none; cursor: pointer; padding: 18px 0; font-weight: 700; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 24px; line-height: 1; color: var(--blue); flex: none; }
+details[open] summary::after { content: "–"; }
+details p { color: var(--muted); padding-bottom: 18px; }
+
+/* Kontakt */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+.direct { display: grid; gap: 4px; margin-top: 32px; }
+.drow { display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: center; padding: 14px 0; }
+.drow svg { width: 32px; height: 32px; color: var(--blue); }
+.drow .value { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; letter-spacing: .01em; }
+.drow .value a { text-decoration: none; }
+.drow .value a:hover { color: var(--blue); }
+.mini { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 2px; }
+.mini a, .mini button { font: 700 14px var(--font-body); letter-spacing: .08em; text-transform: uppercase; padding: 0; border: 0; background: transparent; color: var(--blue); text-decoration: none; cursor: pointer; }
+.mini a:hover, .mini button:hover { text-decoration: underline; }
+.qr-block { display: flex; align-items: center; gap: 22px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.qr-tile { background: #fff; border-radius: 12px; padding: 10px; width: 132px; height: 132px; flex: none; }
+.qr-tile svg { width: 100%; height: 100%; display: block; }
+.scan { font-family: var(--font-script); font-size: 30px; line-height: 1; color: var(--ink); transform: rotate(-6deg); }
+.scan small { display: block; font-family: var(--font-body); font-size: 13px; color: var(--muted); transform: rotate(6deg); margin-top: 6px; letter-spacing: .02em; }
+
+form { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: clamp(20px, 4vw, 32px); display: grid; gap: 18px; }
+form h3 { font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+label { display: grid; gap: 6px; font-weight: 600; font-size: 14px; color: var(--muted); min-width: 0; }
+input, select, textarea { font: 500 16px var(--font-body); color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 10px; padding: 13px 14px; width: 100%; min-width: 0; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--blue); outline-offset: 0; border-color: var(--blue); }
+textarea { resize: vertical; min-height: 84px; }
+.preview { font-size: 15px; white-space: pre-wrap; color: var(--muted); background: var(--bg); border-radius: 10px; padding: 12px 14px; min-height: 3.2em; }
+.hint { font-size: 14px; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+.form-actions { display: grid; gap: 10px; }
+.status { font-size: 15px; color: var(--blue); font-weight: 600; min-height: 1.4em; }
+
+footer { padding-block: 28px 44px; color: var(--muted); font-size: 14px; letter-spacing: .2em; text-transform: uppercase; border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+.bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; gap: 10px;
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  background: var(--surface); border-top: 1px solid var(--line); }
+.bar .btn { flex: 1 1 0; padding: 13px 12px; }
+
+@media (min-width: 821px) { .bar { display: none; } body { padding-bottom: 0; } }
+@media (max-width: 820px) {
+  .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+  .trio { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .services { grid-template-columns: 1fr; }
+  .row2 { grid-template-columns: 1fr; }
+  .cta-row .btn { width: 100%; }
+  .brand .wm { font-size: 20px; }
+  .brand svg { width: 52px; height: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="car-logo" viewBox="0 0 200 56">
+    <path d="M4 46c26-8 40-24 78-30 34-5 58 0 84 12 6 3 14 5 24 6" fill="none" stroke="#DDE3EC" stroke-width="3" stroke-linecap="round"/>
+    <path d="M26 50c46-5 94-3 150-6" fill="none" stroke="#DDE3EC" stroke-width="1.800" stroke-linecap="round" opacity=".7"/>
+    <path d="M176 3c4 6 8 10 8 15a8 8 0 0 1-16 0c0-5 4-9 8-15Z" fill="#2A86F0"/>
+    <path d="M192 20c2.500 3.500 4.500 6 4.500 8.500a4.500 4.500 0 0 1-9 0c0-2.500 2-5 4.500-8.500Z" fill="#2A86F0"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="QuickWash, Startseite">
+      <svg aria-hidden="true"><use href="#car-logo"/></svg>
+      <span class="wm"><span class="q">Quick</span><span class="w">Wash</span></span>
+    </a>
+    <a class="phone-top" href="tel:+4915128804976">+49 151 28804976</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="logo-big">
+          <svg viewBox="0 0 200 56" aria-hidden="true"><use href="#car-logo"/></svg>
+          <div class="wm"><span class="q">Quick</span><span class="w">Wash</span></div>
+          <p class="sub">Mobile Reinigungsservice</p>
+        </div>
+        <h1>Sauber. Schnell. <span>Zuverlässig.</span></h1>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg>Wir kommen zu dir: Aachen &amp; Umgebung</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg>Preis vorab, keine Überraschung</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.500l4.500 4.500L19 7.500"/></svg>Anfrage in einer Minute geschrieben</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#termin">Kostenlos anfragen</a>
+          <a class="btn btn-ghost" href="tel:+4915128804976">Jetzt anrufen</a>
+        </div>
+      </div>
+      <div>
+        <div class="ba" id="ba" style="--pos: 50%">
+          <div class="ba-layer ba-clean"></div>
+          <div class="ba-layer ba-dirty"></div>
+          <span class="ba-tag l">Vorher</span>
+          <span class="ba-tag r">Nachher</span>
+          <div class="ba-handle"></div>
+          <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Regler">
+        </div>
+        <p class="ba-caption">Regler ziehen. Beispielbild, echte Fotos folgen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="leistungen">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow">Unsere Leistungen</p>
+        <h2>Wir machen sauber, was du uns zeigst</h2>
+        <hr class="rule">
+      </div>
+      <div class="services">
+        <article class="service">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 28l3.500-10a4 4 0 0 1 3.800-2.700h17.400A4 4 0 0 1 36.500 18L40 28"/><rect x="6" y="28" width="36" height="10" rx="3"/><circle cx="14" cy="33" r="1.800"/><circle cx="34" cy="33" r="1.800"/><path d="M10 38v4M38 38v4"/></svg>
+          <h3>Auto-Außenwäsche</h3>
+          <p>Schonend &amp; gründlich. Karosserie, Scheiben, Felgen und Fußmatten.</p>
+        </article>
+        <article class="service">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h28M18 12V7h12v5M13 12l2.500 31h17L35 12M19 20v16M24 20v16M29 20v16"/></svg>
+          <h3>Mülltonnenreinigung</h3>
+          <p>Geruchsneutral &amp; hygienisch. Innen und außen, auch regelmäßig buchbar.</p>
+        </article>
+        <article class="service">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 24L24 8l18 16M11 21v21h26V21M20 42V30h8v12"/></svg>
+          <h3>Einfahrten &amp; Hauseingänge</h3>
+          <p>Sauber bis in die letzte Ecke. Pflaster, Treppen, Wege und Eingänge.</p>
+        </article>
+        <article class="service">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="3"/><path d="M24 6v36M8 24h32"/></svg>
+          <h3>Fensterreinigung</h3>
+          <p>Streifenfrei &amp; klar. Fenster, Rahmen und Fensterbänke.</p>
+        </article>
+      </div>
+      <p class="more center">Terrasse, Gartenmöbel, Zaun oder Carport? Frag einfach an.</p>
+    </div>
+  </section>
+
+  <section id="ueber-uns">
+    <div class="wrap about">
+      <div class="center">
+        <p class="eyebrow">Über uns</p>
+        <h2>Zwei Schüler, ein Ziel: sauber</h2>
+        <hr class="rule">
+      </div>
+      <div class="about-text">
+        <p>Hi, ich bin Davit. Zusammen mit meinem Freund führe ich QuickWash neben der Schule. Wir sind beide noch Schüler, aber wir arbeiten so, wie du es von einem Profi erwartest: pünktlich, ordentlich und mit klarem Preis vorab.</p>
+        <p>Jeder Auftrag wird mit Sorgfalt gemacht, egal ob Auto, Mülltonne oder Hauseingang. Wenn du nicht zufrieden bist, sagst du es uns und wir machen es richtig.</p>
+        <p class="sign">Davit &amp; QuickWash-Team</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="vorteile">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow">Dein Partner für Sauberkeit</p>
+        <h2>Sauber. Schnell. Zuverlässig.</h2>
+        <hr class="rule">
+      </div>
+      <div class="trio">
+        <article class="tile"><h3>Sauber</h3><p>Wir hören erst auf, wenn es sauber ist, und nicht, wenn es schnell geht.</p></article>
+        <article class="tile"><h3>Schnell</h3><p>Du bekommst schnell eine Antwort und einen Termin, der zu dir passt.</p></article>
+        <article class="tile"><h3>Zuverlässig</h3><p>Ein Termin ist ein Termin. Der Preis steht vorab fest.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ablauf">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow">So läuft es ab</p>
+        <h2>In 3 Schritten zum sauberen Ergebnis</h2>
+        <hr class="rule">
+      </div>
+      <div class="trio">
+        <article class="tile"><div class="n">1</div><h3>Anfragen</h3><p>Du schreibst oder rufst an und sagst, was gereinigt werden soll.</p></article>
+        <article class="tile"><div class="n">2</div><h3>Termin ausmachen</h3><p>Wir bestätigen dir einen Termin und nennen dir den Preis.</p></article>
+        <article class="tile"><div class="n">3</div><h3>Sauber</h3><p>Wir reinigen, du schaust zufrieden aufs Ergebnis.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="band">
+        <h2>Bereit für saubere Flächen?</h2>
+        <p>Schreib uns kurz, was gereinigt werden soll. Wir melden uns schnell zurück.</p>
+        <a class="btn btn-primary" href="#termin">Jetzt kostenlos anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="center">
+        <p class="eyebrow">Fragen und Antworten</p>
+        <h2>Noch Fragen? Hier sind Antworten.</h2>
+        <hr class="rule">
+      </div>
+      <div class="faq">
+        <details><summary>Wo seid ihr unterwegs?</summary><p>In Aachen und Umgebung. Wir kommen zu dir, du musst nirgendwo hinfahren.</p></details>
+        <details><summary>Was kann ich reinigen lassen?</summary><p>Autos (außen), Mülltonnen, Einfahrten, Hauseingänge, Treppen, Fenster und vieles mehr. Wenn du unsicher bist, frag einfach nach.</p></details>
+        <details><summary>Was kostet das?</summary><p>Das hängt von Größe und Verschmutzung ab. Du bekommst den Preis vorab, bevor wir anfangen.</p></details>
+        <details><summary>Wie mache ich einen Termin aus?</summary><p>Ruf an, schreib per WhatsApp oder nutze das Formular unten. Wir bestätigen dir den Termin persönlich.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="termin">
+    <div class="wrap contact-grid">
+      <div id="kontakt">
+        <p class="eyebrow">Kontakt</p>
+        <h2>Frag uns einfach an</h2>
+        <hr class="rule">
+        <div class="direct">
+          <div class="drow">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4a12 12 0 0 0-10.300 18L4 28l6.200-1.600A12 12 0 1 0 16 4z"/><path d="M12 11c0 5 4 9 9 9l1.600-2.200-3-1.600-1.200 1.200c-1.600-.6-3-2-3.600-3.600l1.200-1.200-1.600-3z"/></svg>
+            <div><span class="value"><a href="tel:+4915128804976">+49 151 28804976</a></span>
+              <span class="mini"><a href="https://wa.me/4915128804976" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+4915128804976">Anrufen</a><button type="button" data-copy="+49 151 28804976">Kopieren</button></span></div>
+          </div>
+          <div class="drow">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="7"/><circle cx="16" cy="16" r="5.500"/><circle cx="23" cy="9" r="1" fill="currentColor"/></svg>
+            <div><span class="value">@quickwasch.ac</span>
+              <span class="mini"><a href="https://www.instagram.com/quickwasch.ac/" target="_blank" rel="noopener">Instagram öffnen</a></span></div>
+          </div>
+          <div class="drow">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="3"/><path d="M5 9l11 9 11-9"/></svg>
+            <div><span class="value">quickwasch@gmail.com</span>
+              <span class="mini"><a href="mailto:quickwasch@gmail.com">Mail schreiben</a><button type="button" data-copy="quickwasch@gmail.com">Kopieren</button></span></div>
+          </div>
+          <div class="drow">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29s9-8.500 9-15a9 9 0 0 0-18 0c0 6.500 9 15 9 15z"/><circle cx="16" cy="14" r="3.500"/></svg>
+            <div><span class="value">Aachen &amp; Umgebung</span></div>
+          </div>
+        </div>
+        <div class="qr-block">
+          <div class="qr-tile"><svg class="qr" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" role="img" aria-label="QR-Code zur Webseite"><path d="M0 0h7v1h-7zM11 0h3v1h-3zM17 0h1v1h-1zM22 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h2v1h-2zM12 1h4v1h-4zM17 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h1v1h-1zM10 2h2v1h-2zM14 2h1v1h-1zM16 2h1v1h-1zM18 2h2v1h-2zM22 2h1v1h-1zM24 2h3v1h-3zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM10 3h1v1h-1zM12 3h2v1h-2zM15 3h3v1h-3zM22 3h1v1h-1zM24 3h3v1h-3zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM10 4h3v1h-3zM16 4h1v1h-1zM19 4h1v1h-1zM22 4h1v1h-1zM24 4h3v1h-3zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM11 5h2v1h-2zM14 5h7v1h-7zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h7v1h-7zM11 7h2v1h-2zM1 8h3v1h-3zM5 8h2v1h-2zM13 8h1v1h-1zM15 8h2v1h-2zM18 8h2v1h-2zM26 8h2v1h-2zM0 9h3v1h-3zM4 9h1v1h-1zM7 9h1v1h-1zM15 9h2v1h-2zM18 9h1v1h-1zM20 9h2v1h-2zM23 9h1v1h-1zM26 9h1v1h-1zM28 9h1v1h-1zM0 10h2v1h-2zM3 10h6v1h-6zM10 10h5v1h-5zM19 10h2v1h-2zM22 10h3v1h-3zM26 10h2v1h-2zM0 11h2v1h-2zM3 11h3v1h-3zM7 11h1v1h-1zM10 11h1v1h-1zM15 11h2v1h-2zM18 11h1v1h-1zM20 11h1v1h-1zM23 11h3v1h-3zM28 11h1v1h-1zM0 12h2v1h-2zM4 12h1v1h-1zM6 12h1v1h-1zM10 12h1v1h-1zM12 12h3v1h-3zM16 12h2v1h-2zM19 12h3v1h-3zM23 12h1v1h-1zM26 12h3v1h-3zM0 13h4v1h-4zM15 13h3v1h-3zM19 13h1v1h-1zM22 13h2v1h-2zM25 13h2v1h-2zM28 13h1v1h-1zM2 14h1v1h-1zM4 14h1v1h-1zM6 14h3v1h-3zM11 14h1v1h-1zM14 14h2v1h-2zM19 14h2v1h-2zM22 14h4v1h-4zM27 14h2v1h-2zM0 15h1v1h-1zM3 15h1v1h-1zM5 15h1v1h-1zM7 15h1v1h-1zM9 15h2v1h-2zM14 15h1v1h-1zM16 15h1v1h-1zM24 15h2v1h-2zM28 15h1v1h-1zM0 16h2v1h-2zM3 16h2v1h-2zM6 16h1v1h-1zM9 16h1v1h-1zM11 16h1v1h-1zM17 16h1v1h-1zM23 16h1v1h-1zM25 16h1v1h-1zM1 17h2v1h-2zM9 17h3v1h-3zM13 17h1v1h-1zM17 17h3v1h-3zM21 17h2v1h-2zM26 17h1v1h-1zM0 18h1v1h-1zM2 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM12 18h1v1h-1zM14 18h1v1h-1zM17 18h2v1h-2zM20 18h1v1h-1zM22 18h3v1h-3zM26 18h1v1h-1zM2 19h1v1h-1zM4 19h1v1h-1zM7 19h1v1h-1zM9 19h2v1h-2zM13 19h1v1h-1zM15 19h4v1h-4zM20 19h3v1h-3zM25 19h3v1h-3zM1 20h1v1h-1zM4 20h3v1h-3zM8 20h2v1h-2zM11 20h1v1h-1zM13 20h3v1h-3zM17 20h12v1h-12zM8 21h1v1h-1zM12 21h1v1h-1zM14 21h1v1h-1zM16 21h2v1h-2zM19 21h2v1h-2zM24 21h2v1h-2zM27 21h2v1h-2zM0 22h7v1h-7zM9 22h1v1h-1zM11 22h1v1h-1zM16 22h1v1h-1zM18 22h3v1h-3zM22 22h1v1h-1zM24 22h1v1h-1zM26 22h2v1h-2zM0 23h1v1h-1zM6 23h1v1h-1zM8 23h2v1h-2zM12 23h2v1h-2zM16 23h2v1h-2zM20 23h1v1h-1zM24 23h1v1h-1zM27 23h1v1h-1zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM9 24h1v1h-1zM13 24h4v1h-4zM20 24h8v1h-8zM0 25h1v1h-1zM2 25h3v1h-3zM6 25h1v1h-1zM8 25h2v1h-2zM11 25h1v1h-1zM13 25h1v1h-1zM17 25h1v1h-1zM19 25h1v1h-1zM24 25h4v1h-4zM0 26h1v1h-1zM2 26h3v1h-3zM6 26h1v1h-1zM8 26h2v1h-2zM13 26h1v1h-1zM17 26h2v1h-2zM20 26h1v1h-1zM23 26h1v1h-1zM25 26h1v1h-1zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h2v1h-2zM11 27h1v1h-1zM13 27h3v1h-3zM22 27h1v1h-1zM24 27h2v1h-2zM27 27h1v1h-1zM0 28h7v1h-7zM9 28h1v1h-1zM13 28h1v1h-1zM18 28h2v1h-2zM22 28h2v1h-2zM27 28h1v1h-1z" fill="#000"/></svg></div>
+          <p class="scan">Einfach scannen!<small>Öffnet diese Webseite</small></p>
+        </div>
+      </div>
+
+      <form id="req" novalidate>
+        <h3>Kostenlos anfragen</h3>
+        <div class="row2">
+          <label for="f-name">Dein Name
+            <input id="f-name" type="text" autocomplete="name" placeholder="Vor- und Nachname">
+          </label>
+          <label for="f-tel">Telefonnummer
+            <input id="f-tel" type="tel" autocomplete="tel" placeholder="Für Rückfragen">
+          </label>
+        </div>
+        <div class="row2">
+          <label for="f-was">Was soll sauber werden?
+            <select id="f-was">
+              <option>Auto-Außenwäsche</option>
+              <option>Mülltonnen</option>
+              <option>Einfahrt oder Hauseingang</option>
+              <option>Fenster</option>
+              <option>Terrasse oder Balkon</option>
+              <option>Etwas anderes</option>
+            </select>
+          </label>
+          <label for="f-tag">Wunschtermin
+            <input id="f-tag" type="date">
+          </label>
+        </div>
+        <label for="f-ort">Adresse oder PLZ
+          <input id="f-ort" type="text" autocomplete="postal-code" placeholder="Wo sollen wir hinkommen?">
+        </label>
+        <label for="f-msg">Noch etwas zu wissen?
+          <textarea id="f-msg" placeholder="z. B. zwei Autos, 4 Tonnen, Treppe mit 12 Stufen"></textarea>
+        </label>
+        <div>
+          <p class="hint">So sieht deine Nachricht aus</p>
+          <div class="preview" id="preview" aria-live="polite"></div>
+        </div>
+        <div class="form-actions">
+          <a class="btn btn-primary" id="wa" href="https://wa.me/4915128804976" target="_blank" rel="noopener">Per WhatsApp senden</a>
+          <a class="btn btn-ghost" id="mail" href="mailto:quickwasch@gmail.com">Per E-Mail senden</a>
+          <button class="btn btn-ghost" type="button" id="copy-msg">Text kopieren</button>
+        </div>
+        <p class="status" id="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>QuickWash · Mobile Reinigungsservice</span>
+    <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Schnellkontakt">
+  <a class="btn btn-ghost" href="tel:+4915128804976">Anrufen</a>
+  <a class="btn btn-primary" href="https://wa.me/4915128804976" target="_blank" rel="noopener">WhatsApp</a>
+</nav>
+
+<script>
+(function () {
+  var NUM = "4915128804976";
+  var MAIL = "quickwasch@gmail.com";
+  var $ = function (id) { return document.getElementById(id); };
+
+  var ba = $("ba"), range = $("ba-range");
+  range.addEventListener("input", function () { ba.style.setProperty("--pos", range.value + "%"); });
+
+  var fields = ["f-name", "f-tel", "f-was", "f-tag", "f-ort", "f-msg"];
+  function fmtDate(v) {
+    if (!v) return "";
+    var p = v.split("-");
+    return p.length === 3 ? p[2] + "." + p[1] + "." + p[0] : v;
+  }
+  function build() {
+    var name = $("f-name").value.trim(), tel = $("f-tel").value.trim(), was = $("f-was").value,
+        tag = fmtDate($("f-tag").value), ort = $("f-ort").value.trim(), msg = $("f-msg").value.trim();
+    var lines = ["Hallo QuickWash, ich möchte einen Termin anfragen."];
+    lines.push("Das soll sauber werden: " + was);
+    if (tag) lines.push("Wunschtermin: " + tag);
+    if (ort) lines.push("Ort: " + ort);
+    if (msg) lines.push("Hinweis: " + msg);
+    if (name) lines.push("Name: " + name);
+    if (tel) lines.push("Telefon: " + tel);
+    return lines.join("\n");
+  }
+  function update() {
+    var text = build();
+    $("preview").textContent = text;
+    $("wa").href = "https://wa.me/" + NUM + "?text=" + encodeURIComponent(text);
+    $("mail").href = "mailto:" + MAIL + "?subject=" + encodeURIComponent("Terminanfrage QuickWash") + "&body=" + encodeURIComponent(text);
+  }
+  fields.forEach(function (id) { $(id).addEventListener("input", update); $(id).addEventListener("change", update); });
+  $("req").addEventListener("submit", function (e) { e.preventDefault(); });
+
+  try {
+    var d = new Date(), m = String(d.getMonth() + 1).padStart(2, "0"), day = String(d.getDate()).padStart(2, "0");
+    $("f-tag").min = d.getFullYear() + "-" + m + "-" + day;
+  } catch (e) {}
+
+  var statusEl = $("status");
+  function flash(msg) { statusEl.textContent = msg; setTimeout(function () { statusEl.textContent = ""; }, 3500); }
+  function copy(text, okMsg) {
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+      flash(ok ? okMsg : "Kopieren geht hier nicht. Bitte Text markieren und kopieren.");
+    }
+    try { navigator.clipboard.writeText(text).then(function () { flash(okMsg); }, fallback); }
+    catch (e) { fallback(); }
+  }
+  $("copy-msg").addEventListener("click", function () { copy(build(), "Anfrage kopiert. Du kannst sie jetzt einfügen und an " + MAIL + " schicken."); });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-copy]"), function (b) {
+    b.addEventListener("click", function () {
+      var old = b.textContent;
+      copy(b.getAttribute("data-copy"), "Kopiert.");
+      b.textContent = "Kopiert";
+      setTimeout(function () { b.textContent = old; }, 1800);
+    });
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
